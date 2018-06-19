@@ -5,7 +5,9 @@
   "main": "bin/start.js",
   "license": "MIT",
   "scripts": {
-    "start": "DEBUG=* node bin/start.js"
+    "start": "DEBUG=* node bin/start.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bin": {
     "alexa-skill-test": "./bin/start.js"
@@ -56,6 +58,8 @@
     "tiny-lr": "^1.0.3",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
-    "yarn": "^0.21.3"
-  }
+    "yarn": "^0.21.3",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
